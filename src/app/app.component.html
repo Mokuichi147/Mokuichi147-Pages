@@ -10,18 +10,19 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
   <div class="spacer-px"></div>
-  <span id="top-label">Mokuichi147</span>
+  <span id="top-label">Mokuichi147 {{ screen_size }}</span>
   <div class="spacer"></div>
 
-  <mat-menu #appMenu="matMenu" yPosition="above" class="alpha-bg-color">
-    <button mat-menu-item>HOME</button>
-    <button mat-menu-item>PROJECT</button>
-    <button mat-menu-item>ABOUT</button>
-  </mat-menu>
-
-  <button mat-icon-button [matMenuTriggerFor]="appMenu" class="alpha-bg-color">
-    <mat-icon>menu</mat-icon>
-  </button>
+  <div *ngIf="small_menu">
+    <mat-menu #appMenu="matMenu" yPosition="above" class="alpha-bg-color">
+      <button mat-menu-item>HOME</button>
+      <button mat-menu-item>PROJECT</button>
+      <button mat-menu-item>ABOUT</button>
+    </mat-menu>
+    <button mat-icon-button [matMenuTriggerFor]="appMenu" class="alpha-bg-color">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
 
   <div class="spacer-px"></div>
 </div>
