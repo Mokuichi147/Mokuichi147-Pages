@@ -25,69 +25,42 @@ h5,
 h6
   margin 8px 0
 
-p {
-  margin: 0;
-}
+p
+  margin 0
 
-.spacer {
-  flex: 1;
-}
+.spacer
+  flex 1
 
-.spacer-px {
-  flex: 0 20px;
-}
+.spacer-px
+  flex 0 20px
 
-.alpha-bg-color {
-  background-color: transparent;
-  color: text-color;
-  border-color: transparent;
-}
+.toolbar
+  position fixed
+  top 0
+  left 0
+  right 0
+  height 60px
+  display flex
+  align-items center
+  color text-color
+  font-weight 600
+  z-index 10
 
-.main-color {
-  color: text-color;
-  background-color: bg-color;
-}
-
-.toolbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  color: text-color;
-  font-weight: 600;
-  z-index: 10;
-}
-
-#dark-mode-menu {
+#dark-mode-menu
   color white-color
   background-color transparent
   border-color transparent
-}
 
-#light-mode-menu {
+#light-mode-menu
   color black-color
   background-color transparent
   border-color transparent
-}
 
-.toolbar #top-label {
-  font-size: 1.5rem;
-}
+.toolbar #top-label
+  font-size 1.5rem
 
 .toolbar img {
   margin: 0 16px;
-}
-
-.toolbar #twitter-logo {
-  height: 40px;
-  margin: 0 16px;
-}
-
-.toolbar #twitter-logo:hover {
-  opacity: 0.8;
 }
 
 .content {
