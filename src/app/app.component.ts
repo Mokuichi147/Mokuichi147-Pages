@@ -8,10 +8,32 @@ import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/l
 })
 export class AppComponent implements OnInit {
   title = 'Mokuichi147-Pages';
+
+  // screen size
   screen_size = 'm';
   small_menu = false;
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+
+  constructor(private breakpointObserver: BreakpointObserver) {
+    window.onload = this.changeColorMode;
+  }
+
+  changeColorMode() {
+    let dark_mode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    let root = document.documentElement;
+    let menu_button = document.getElementById('menu-button');
+
+    if (dark_mode) {
+      root.style.color = '#e0e0e0';
+      root.style.backgroundColor = '#101010';
+      menu_button.style.color = '#e0e0e0';
+    }
+  }
+
+  showMenu() {
+    console.log('menu button clicked');
+  }
 
   ngOnInit() {
     this.breakpointObserver.observe([
@@ -22,23 +44,14 @@ export class AppComponent implements OnInit {
       Breakpoints.XLarge
     ]).subscribe( (state: BreakpointState) => {
       if (state.breakpoints[Breakpoints.XSmall]) {
-        console.log( 'Matches XSmall viewport');
         this.screen_size = 'xs';
-      }
-      if (state.breakpoints[Breakpoints.Small]) {
-        console.log( 'Matches Small viewport');
+      } else if (state.breakpoints[Breakpoints.Small]) {
         this.screen_size = 's';
-      }
-      if (state.breakpoints[Breakpoints.Medium]) {
-        console.log( 'Matches Medium  viewport');
+      } else if (state.breakpoints[Breakpoints.Medium]) {
         this.screen_size = 'm';
-      }
-      if (state.breakpoints[Breakpoints.Large]) {
-        console.log( 'Matches Large viewport');
+      } else if (state.breakpoints[Breakpoints.Large]) {
         this.screen_size = 'l';
-      }
-      if (state.breakpoints[Breakpoints.XLarge]) {
-        console.log( 'Matches XLarge viewport');
+      } else if (state.breakpoints[Breakpoints.XLarge]) {
         this.screen_size = 'xl';
       }
       if (this.screen_size == 'xs') {
