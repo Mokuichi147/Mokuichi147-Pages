@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   // screen size
   screen_size = 'm';
   small_menu = false;
+  dark_mode = false;
 
 
   constructor(private breakpointObserver: BreakpointObserver) {
@@ -19,15 +20,13 @@ export class AppComponent implements OnInit {
   }
 
   changeColorMode() {
-    let dark_mode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    this.dark_mode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
     let root = document.documentElement;
-    let menu_button = document.getElementById('menu-button');
 
-    if (dark_mode) {
+    if (this.dark_mode) {
       root.style.color = '#e0e0e0';
       root.style.backgroundColor = '#101010';
-      menu_button.style.color = '#e0e0e0';
     }
   }
 
@@ -56,6 +55,7 @@ export class AppComponent implements OnInit {
       }
       if (this.screen_size == 'xs') {
         this.small_menu = true;
+        this.dark_mode = window.matchMedia('(prefers-color-scheme: dark)').matches;
       } else {
         this.small_menu = false;
       }

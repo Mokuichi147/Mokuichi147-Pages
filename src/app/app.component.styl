@@ -1,11 +1,11 @@
-dark-color = #101010
+black-color = #101010
 white-color = #e0e0e0
 
 @media (prefers-color-scheme: ligth)
   bg-color = white-color
-  text-color = dark-color
+  text-color = black-color
 @media (prefers-color-scheme: dark)
-  bg-color = dark-color
+  bg-color = black-color
   text-color = white-color
 
 :host
@@ -61,8 +61,14 @@ p {
   z-index: 10;
 }
 
-#menu-button {
-  color dark-color
+#dark-mode-menu {
+  color white-color
+  background-color transparent
+  border-color transparent
+}
+
+#light-mode-menu {
+  color black-color
   background-color transparent
   border-color transparent
 }
