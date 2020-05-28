@@ -10,12 +10,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
 import { HomeComponent } from './home/home.component';
 import { ProjectComponent } from './project/project.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ProjectComponent
+    ProjectComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
