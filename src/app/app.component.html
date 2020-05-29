@@ -14,7 +14,12 @@
   <div class="spacer"></div>
 
   <div *ngIf="small_menu">
-    <button (click)="showMenu()" id="menu-button">
+    <mat-menu #appMenu="matMenu" yPosition="above">
+      <button mat-menu-item routerLink="/Home">HOME</button>
+      <button mat-menu-item routerLink="/Project">PROJECT</button>
+      <button mat-menu-item routerLink="/About">ABOUT</button>
+    </mat-menu>
+    <button [matMenuTriggerFor]="appMenu" (click)="showMenu()" id="menu-button">
       <mat-icon>menu</mat-icon>
     </button>
   </div>
