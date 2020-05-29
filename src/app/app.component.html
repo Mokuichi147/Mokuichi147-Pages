@@ -14,16 +14,9 @@
   <div class="spacer"></div>
 
   <div *ngIf="small_menu">
-    <div *ngIf="dark_mode">
-      <button (click)="showMenu()" id="dark-mode-menu">
-        <mat-icon>menu</mat-icon>
-      </button>
-    </div>
-    <div *ngIf="!dark_mode">
-      <button (click)="showMenu()" id="light-mode-menu">
-        <mat-icon>menu</mat-icon>
-      </button>
-    </div>
+    <button (click)="showMenu()" id="menu-button">
+      <mat-icon>menu</mat-icon>
+    </button>
   </div>
   <div *ngIf="!small_menu">
     <button mat-button routerLink="/Home">HOME</button>
@@ -227,7 +220,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-
-<router-outlet></router-outlet>

@@ -12,23 +12,9 @@ export class AppComponent implements OnInit {
   // screen size
   screen_size = 'm';
   small_menu = false;
-  dark_mode = false;
 
 
-  constructor(private breakpointObserver: BreakpointObserver) {
-    window.onload = this.changeColorMode;
-  }
-
-  changeColorMode() {
-    this.dark_mode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    let root = document.documentElement;
-
-    if (this.dark_mode) {
-      root.style.color = '#e0e0e0';
-      root.style.backgroundColor = '#101010';
-    }
-  }
+  constructor(private breakpointObserver: BreakpointObserver) {}
 
   showMenu() {
     console.log('menu button clicked');
@@ -55,7 +41,6 @@ export class AppComponent implements OnInit {
       }
       if (this.screen_size == 'xs') {
         this.small_menu = true;
-        this.dark_mode = window.matchMedia('(prefers-color-scheme: dark)').matches;
       } else {
         this.small_menu = false;
       }
