@@ -1,5 +1,5 @@
 <div class="inline-pos">
-  <span *ngFor="let tex of project_names[select_index]; index as i; trackBy: trackByIdentity" [ngStyle]="{'animation-delay': i*50+'ms'}" id="title">
+  <span *ngFor="let tex of project_names[select_index]; index as i; trackBy: trackByIdentity" [ngStyle]="{'animation-delay': i*50+'ms'}" class="title">
     {{tex}}
   </span>
 </div>
