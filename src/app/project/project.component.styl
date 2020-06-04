@@ -2,10 +2,10 @@
   height 0px
   text-align center
   transform translateY(10vh)
-  @media screen and (min-width 700px) and (min-height 500px)
-    text-align right
-    padding 0 50px 0 0
-    transform translateY(45vh)
+  @media screen and (min-width 660px)
+    text-align left
+    padding 0 0 0 30px
+    transform translateY(55vh)
 
 
 .title
@@ -13,14 +13,14 @@
   opacity 0
   font-size 3rem
   line-height 3rem
-  text-shadow 0 0 5px #101010
   animation-name title_show
   animation-timing-function ease
   animation-duration 1s
   animation-fill-mode forwards
-  @media screen and (min-width 700px) and (min-height 500px)
+  @media screen and (min-width 660px)
     font-size 5rem
     line-height 5rem
+    text-shadow 0 0 3px #80808080
 
 @keyframes title_show
   0%
@@ -32,3 +32,5 @@
 
 #main-img
   width 100%
+  height calc(100vh - 120px)
+  object-fit contain
