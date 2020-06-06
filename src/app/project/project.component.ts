@@ -36,6 +36,8 @@ export class ProjectComponent implements OnInit {
     if (this.select_index >= this.projects.length) {
       this.select_index = 0;
     }
+
+    var target_img = <HTMLImageElement>document.getElementById('main-img');
   }
 
   trackByIdentity (index: number, item: any) {

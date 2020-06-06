@@ -3,9 +3,9 @@
   text-align center
   transform translateY(10vh)
   @media screen and (min-width 660px)
-    text-align left
-    padding 0 0 0 30px
-    transform translateY(55vh)
+    text-align right
+    padding 0 30px 0 0
+    transform translateY(30vh)
 
 
 .title
@@ -13,6 +13,8 @@
   opacity 0
   font-size 3rem
   line-height 3rem
+  position relative
+  z-index 5
   animation-name title_show
   animation-timing-function ease
   animation-duration 1s
@@ -30,7 +32,17 @@
     opacity 1
     transform translateX(0px)
 
+#main-img-box
+  position absolute
+  z-index 0
+  width 100vw
+  height calc(100vh - 60px)
+
 #main-img
   width 100%
-  height calc(100vh - 120px)
-  object-fit contain
+  filter brightness(70%)
+  object-fit cover
+
+
+.space
+  height 90vh
