@@ -1,0 +1,48 @@
+.inline-pos
+  height 0px
+  text-align center
+  transform translateY(10vh)
+  @media screen and (min-width 660px)
+    text-align right
+    padding 0 30px 0 0
+    transform translateY(30vh)
+
+
+.title
+  display inline-block
+  opacity 0
+  font-size 3rem
+  line-height 3rem
+  position relative
+  z-index 5
+  animation-name title_show
+  animation-timing-function ease
+  animation-duration 1s
+  animation-fill-mode forwards
+  @media screen and (min-width 660px)
+    font-size 5rem
+    line-height 5rem
+    text-shadow 0 0 3px #80808080
+
+@keyframes title_show
+  0%
+    opacity 0
+    transform translateX(20px)
+  100%
+    opacity 1
+    transform translateX(0px)
+
+#main-img-box
+  position absolute
+  z-index 0
+  width 100vw
+  height calc(100vh - 60px)
+
+#main-img
+  width 100%
+  filter brightness(70%)
+  object-fit cover
+
+
+.space
+  height 90vh
