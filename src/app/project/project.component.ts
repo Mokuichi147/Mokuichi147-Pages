@@ -40,6 +40,17 @@ export class ProjectComponent implements OnInit {
     var target_img = <HTMLImageElement>document.getElementById('main-img');
   }
 
+  prevClick() {
+    this.project_name_show = !this.project_name_show;
+    this.select_index--;
+    console.log(this.select_index);
+    if (this.select_index < 0) {
+      this.select_index = this.projects.length - 1;
+    }
+
+    var target_img = <HTMLImageElement>document.getElementById('main-img');
+  }
+
   trackByIdentity (index: number, item: any) {
     // DOMを再生成するためにidではなく適当な値を返す
     return Math.random();
