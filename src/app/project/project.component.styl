@@ -36,12 +36,15 @@
   position absolute
   z-index 0
   width 100vw
-  height calc(100vh - 60px)
+  height calc(100vh - 120px)
+  overflow hidden
 
 #main-img
   width 100%
   filter brightness(70%)
   object-fit cover
+  @media screen and (min-width 660px)
+    height 100%
 
 
 .space
