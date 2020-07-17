@@ -9,6 +9,7 @@
 
 
 .title
+  color #e0e0e0
   display inline-block
   opacity 0
   font-size 3rem
@@ -36,13 +37,27 @@
   position absolute
   z-index 0
   width 100vw
-  height calc(100vh - 60px)
+  height calc(100vw * 0.75)
+  overflow hidden
+  @media screen and (min-width 660px)
+    height calc(100vh - 120px)
 
 #main-img
   width 100%
-  filter brightness(70%)
+  filter brightness(80%)
   object-fit cover
+  @media screen and (min-width 660px)
+    height 100%
 
+#prev-button
+  transform translate(calc(50vw - 150%), calc(100vw * 0.75))
+  @media screen and (min-width 660px)
+    transform translate(calc(50vw - 150%), calc(100vh - 120px))
+
+#next-button
+  transform translate(calc(50vw - 50%), calc(100vw * 0.75))
+  @media screen and (min-width 660px)
+    transform translate(calc(50vw - 50%), calc(100vh - 120px))
 
 .space
   height 90vh

@@ -2,6 +2,9 @@
   margin-top 50px
   width 50%
   transform translateX(50%)
+  @media screen and (min-width 660px)
+    width 330px
+    transform translateX(calc(50vw - 165px))
 
 h1
   text-align center
@@ -46,3 +49,14 @@ h2
 
 .space
   height 90vh
+
+.tool
+  text-align center
+  @media screen and (min-width 660px)
+    text-align left
+
+.tool-space
+  margin-top 20px
+  text-align center
+  @media screen and (min-width 660px)
+    text-align left
