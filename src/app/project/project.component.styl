@@ -37,8 +37,10 @@
   position absolute
   z-index 0
   width 100vw
-  height calc(100vh - 120px)
+  height calc(100vw * 0.75)
   overflow hidden
+  @media screen and (min-width 660px)
+    height calc(100vh - 120px)
 
 #main-img
   width 100%
