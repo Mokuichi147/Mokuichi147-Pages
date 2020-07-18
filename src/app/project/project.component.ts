@@ -51,6 +51,10 @@ export class ProjectComponent implements OnInit {
     var target_img = <HTMLImageElement>document.getElementById('main-img');
   }
 
+  moreClick() {
+    console.log(this.projects[this.select_index].year);
+  }
+
   trackByIdentity (index: number, item: any) {
     // DOMを再生成するためにidではなく適当な値を返す
     return Math.random();

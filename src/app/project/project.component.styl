@@ -50,14 +50,19 @@
     height 100%
 
 #prev-button
+  transform translate(calc(50vw - 200%), calc(100vw * 0.75))
+  @media screen and (min-width 660px)
+    transform translate(calc(50vw - 300%), calc(100vh - 120px))
+
+#next-button
+  transform translate(calc(50vw - 100%), calc(100vw * 0.75))
+  @media screen and (min-width 660px)
+    transform translate(50vw, calc(100vh - 120px))
+
+#more-button
   transform translate(calc(50vw - 150%), calc(100vw * 0.75))
   @media screen and (min-width 660px)
     transform translate(calc(50vw - 150%), calc(100vh - 120px))
-
-#next-button
-  transform translate(calc(50vw - 50%), calc(100vw * 0.75))
-  @media screen and (min-width 660px)
-    transform translate(calc(50vw - 50%), calc(100vh - 120px))
 
 .space
   height 90vh
