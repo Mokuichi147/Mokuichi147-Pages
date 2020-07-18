@@ -7,6 +7,7 @@ import { Projects } from '../projects';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.styl']
 })
+
 export class HomeComponent implements OnInit {
   projects = Projects;
   select_index = 0;
