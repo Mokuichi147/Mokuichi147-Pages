@@ -1,14 +1,3 @@
-<div id="main-img-box">
-  <img src="{{projects[select_index].path}}" id="main-img" />
-</div>
-
-<div class="inline-pos">
-  <span *ngFor="let tex of project_names[select_index]; index as i; trackBy: trackByIdentity" [ngStyle]="{'animation-delay': i*50+'ms'}" class="title">
-    {{tex}}
-  </span>
-</div>
-
-<button id="prev-button" mat-button (click)="prevClick()">prev</button>
-<button id="next-button" mat-button (click)="nextClick()">next</button>
-
-<div class="space"></div>
+<button class="projects-button" mat-button *ngFor="let project of projects">
+  {{project.title}}
+</button>
