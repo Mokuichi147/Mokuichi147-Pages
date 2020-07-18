@@ -1,0 +1,70 @@
+.inline-pos
+  height 0px
+  text-align center
+  transform translateY(calc(50vh - 50%))
+  @media screen and (min-width 660px)
+    text-align right
+    padding 0 30px 0 0
+    transform translateY(40vh)
+
+
+.title
+  color #e0e0e0
+  display inline-block
+  opacity 0
+  font-size 3rem
+  line-height 3rem
+  position relative
+  z-index 5
+  animation-name title_show
+  animation-timing-function ease
+  animation-duration 1s
+  animation-fill-mode forwards
+  @media screen and (min-width 660px)
+    font-size 5rem
+    line-height 5rem
+    text-shadow 0 0 3px #80808080
+
+@keyframes title_show
+  0%
+    opacity 0
+    transform translateX(20px)
+  100%
+    opacity 1
+    transform translateX(0px)
+
+#main-img-box
+  position absolute
+  z-index 0
+  width 100vw
+  transform translateY(calc(50vh - 50% - 60px))
+  height calc(100vw * 0.75)
+  overflow hidden
+  @media screen and (min-width 660px)
+    transform translateY(0)
+    height calc(100vh - 120px)
+
+#main-img
+  width 100%
+  filter brightness(80%)
+  object-fit cover
+  @media screen and (min-width 660px)
+    height 100%
+
+#prev-button
+  transform translate(calc(50vw - 200%), calc(50vw * 0.75 + 50vh - 60px))
+  @media screen and (min-width 660px)
+    transform translate(calc(50vw - 300%), calc(100vh - 120px))
+
+#next-button
+  transform translate(calc(50vw - 100%), calc(50vw * 0.75 + 50vh - 60px))
+  @media screen and (min-width 660px)
+    transform translate(50vw, calc(100vh - 120px))
+
+#more-button
+  transform translate(calc(50vw - 150%), calc(50vw * 0.75 + 50vh - 60px))
+  @media screen and (min-width 660px)
+    transform translate(calc(50vw - 150%), calc(100vh - 120px))
+
+.space
+  height 90vh
