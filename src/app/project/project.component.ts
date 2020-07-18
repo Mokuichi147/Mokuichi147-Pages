@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Projects } from '../projects';
+
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
@@ -7,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ProjectComponent implements OnInit {
+  projects = Projects;
 
   constructor() {}
 
