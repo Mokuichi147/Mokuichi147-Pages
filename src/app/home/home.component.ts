@@ -13,10 +13,18 @@ export class HomeComponent implements OnInit {
   project_names = [];
   project_name_show = true;
   imagePath: string;
+  imageArray: string[] = new Array(this.projects.length);
+  images = [];
 
   constructor() {}
 
   ngOnInit(): void {
+    for (let i = 0; i < this.projects.length; i++) {
+      this.images[i] = new Image();
+      this.images[i].src = this.projects[i].path;
+      this.imageArray[i] = this.images[i].src
+    }
+
     this.changeImage(this.select_index);
 
     // ['project_name'] -> ['p', 'r', 'o', ...]
@@ -31,16 +39,13 @@ export class HomeComponent implements OnInit {
   }
 
   changeImage(id: number) {
-    console.log(id);
     this.select_index += id;
     if (this.select_index >= this.projects.length) {
       this.select_index = 0;
     } else if (this.select_index < 0) {
       this.select_index = this.projects.length - 1;
     }
-
-    console.log(this.projects[this.select_index].path);
-    this.imagePath = this.projects[this.select_index].path;
+    this.imagePath = this.imageArray[this.select_index]
   }
 
   moreClick() {
