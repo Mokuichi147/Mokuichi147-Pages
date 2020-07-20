@@ -9,6 +9,7 @@ import { Projects } from '../projects';
 })
 
 export class HomeComponent implements OnInit {
+  project_image_path: string;
   projects = Projects;
   select_index = 0;
   project_names = [];
@@ -17,6 +18,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.project_image_path = this.projects[0].path;
     // ['project_name'] -> ['p', 'r', 'o', ...]
     let count = 0;
     for (let project of this.projects) {
@@ -24,30 +26,26 @@ export class HomeComponent implements OnInit {
       for (let text of project.title) {
         this.project_names[count].push(text);
       }
-      count += 1;
+      count++;
     }
   }
 
   nextClick() {
     this.project_name_show = !this.project_name_show;
     this.select_index++;
-    console.log(this.select_index);
     if (this.select_index >= this.projects.length) {
       this.select_index = 0;
     }
-
-    var target_img = <HTMLImageElement>document.getElementById('main-img');
+    this.project_image_path = this.projects[this.select_index].path;
   }
 
   prevClick() {
     this.project_name_show = !this.project_name_show;
     this.select_index--;
-    console.log(this.select_index);
     if (this.select_index < 0) {
       this.select_index = this.projects.length - 1;
     }
-
-    var target_img = <HTMLImageElement>document.getElementById('main-img');
+    this.project_image_path = this.projects[this.select_index].path;
   }
 
   moreClick() {
