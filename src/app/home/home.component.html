@@ -3,11 +3,12 @@
 </div>
 
 <div class="inline-pos">
-  <span *ngFor="let tex of project_names[select_index]; index as i; trackBy: trackByIdentity" [ngStyle]="{'animation-delay': i*50+'ms'}" class="title">
+  <span *ngFor="let tex of project_names[select_index]; index as i; trackBy: trackByIdentity"
+    [ngStyle]="{'animation-delay': i*50+'ms'}" class="title">
     {{tex}}
   </span>
 </div>
 
-<button id="prev-button" mat-button (click)="prevClick()">&#60;</button>
+<button id="prev-button" mat-button (click)="changeImage(-1)">&#60;</button>
 <button id="more-button" mat-button (click)="moreClick()">more</button>
-<button id="next-button" mat-button (click)="nextClick()">&#62;</button>
+<button id="next-button" mat-button (click)="changeImage(1)">&#62;</button>
