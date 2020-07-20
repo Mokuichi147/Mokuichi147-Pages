@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
       for (let text of project.title) {
         this.project_names[count].push(text);
       }
-      count += 1;
+      count++;
     }
   }
 
