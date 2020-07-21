@@ -13,7 +13,7 @@ export class ProjectComponent implements OnInit {
   projects = Projects;
   project_bg_image: string;
   show_more = false;
-  more: string;
+  more = '';
 
   constructor() {}
 
@@ -22,5 +22,9 @@ export class ProjectComponent implements OnInit {
 
   backgroundImage(path: string) {
     this.project_bg_image = 'linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url(' + path + ')';
+  }
+
+  projectMore(name: string) {
+    this.more = name;
   }
 }

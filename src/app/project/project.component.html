@@ -1,7 +1,39 @@
-<div [ngStyle]="{backgroundImage: project_bg_image}" class="project-bg">
-  <div *ngFor="let project of projects">
-    <button class="projects-button" mat-button (mouseover)="backgroundImage(project.path)">
-      {{project.title}}
-    </button>
+<div *ngIf="more == ''">
+  <div [ngStyle]="{backgroundImage: project_bg_image}" class="project-bg">
+    <div *ngFor="let project of projects">
+      <button class="projects-button" mat-button (mouseover)="backgroundImage(project.path)" (click)="projectMore(project.title)">
+        {{project.title}}
+      </button>
+    </div>
   </div>
+</div>
+
+<div *ngIf="more == 'Avatar2i'">
+  <button (click)="projectMore('')">
+    戻る
+  </button>
+</div>
+
+<div *ngIf="more == 'AR App'">
+  <button (click)="projectMore('')">
+    戻る
+  </button>
+</div>
+
+<div *ngIf="more == 'AR Grasses'">
+  <button (click)="projectMore('')">
+    戻る
+  </button>
+</div>
+
+<div *ngIf="more == 'SF GUI'">
+  <button (click)="projectMore('')">
+    戻る
+  </button>
+</div>
+
+<div *ngIf="more == 'Lunchbox'">
+  <button (click)="projectMore('')">
+    戻る
+  </button>
 </div>
