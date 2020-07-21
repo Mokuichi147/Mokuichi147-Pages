@@ -1,3 +1,7 @@
-<button class="projects-button" mat-button *ngFor="let project of projects">
-  {{project.title}}
-</button>
+<div [ngStyle]="{backgroundImage: project_bg_image}" class="project-bg">
+  <div *ngFor="let project of projects">
+    <button class="projects-button" mat-button (mouseover)="backgroundImage(project.path)">
+      {{project.title}}
+    </button>
+  </div>
+</div>
