@@ -16,7 +16,7 @@ white-color = #e0e0e0
   background-position center center
 
 .project
-  animation-name page_move
+  animation-name projectpage_move
   animation-timing-function ease
   animation-duration 2.5s
   animation-fill-mode forwards
@@ -27,7 +27,7 @@ white-color = #e0e0e0
     animation-fill-mode forwards
 
 .title-block
-  animation-name title_show
+  animation-name project_title_show
   animation-timing-function ease
   animation-duration 1s
   animation-fill-mode forwards
@@ -58,7 +58,7 @@ h1
   margin 0
   font-size 2.5rem
   line-height 3rem
-  animation-name title_slide
+  animation-name project_title_slide
   animation-timing-function ease
   animation-duration 0.6s
   animation-fill-mode forwards
@@ -93,7 +93,7 @@ h4
     line-height 1.8rem
 
 
-@keyframes page_move
+@keyframes projectpage_move
   0%
     transform translateY(30vh)
   70%
@@ -109,7 +109,7 @@ h4
   100%
     opacity 1
 
-@keyframes title_show
+@keyframes project_title_show
   0%
     opacity 0
     transform rotate(180deg)
@@ -120,7 +120,7 @@ h4
   100%
     transform rotate(0deg)
 
-@keyframes title_slide
+@keyframes project_title_slide
   0%
     transform translateX(-30vw)
   100%
