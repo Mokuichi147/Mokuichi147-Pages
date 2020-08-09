@@ -7,6 +7,7 @@ import { Projects } from '../projects';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.styl'],
 })
+
 export class HomeComponent implements OnInit {
   projects = Projects;
   select_index: number = 0;
@@ -46,10 +47,6 @@ export class HomeComponent implements OnInit {
       this.select_index = this.projects.length - 1;
     }
     this.project_image_path = this.image_array[this.select_index]
-  }
-
-  moreClick() {
-    console.log(this.projects[this.select_index].year);
   }
 
   trackByIdentity(index: number, item: any) {
