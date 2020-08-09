@@ -1,66 +1,12 @@
 <div *ngIf="more == ''">
   <div [ngStyle]="{backgroundImage: project_bg_image}" class="project-bg">
     <div *ngFor="let project of projects">
-      <button class="projects-button" mat-button (mouseover)="backgroundImage(project.path)" (click)="projectMore(project.title)">
+      <button class="projects-button" mat-button routerLink="/Project/{{project.id}}" (mouseover)="backgroundImage(project.path)" (click)="projectMore(project.title)">
         {{project.title}}
       </button>
     </div>
   </div>
 </div>
 
-<div *ngIf="more == 'Avatar2i'" class="project">
-  <button mat-button (click)="projectMore('')">
-    戻る
-  </button>
-  <div class="title-block">
-    <h1>Avatar2i</h1>
-    <h4>2018</h4>
-  </div>
-  <div class="side-space">
-    <div class="text">
-      <a>
-        hello world
-      </a>
-    </div>
-  </div>
-</div>
 
-<div *ngIf="more == 'AR App'" class="project">
-  <button mat-button (click)="projectMore('')">
-    戻る
-  </button>
-  <div class="title-block">
-    <h1>AR App</h1>
-    <h4>2018</h4>
-  </div>
-</div>
-
-<div *ngIf="more == 'AR Grasses'" class="project">
-  <button mat-button (click)="projectMore('')">
-    戻る
-  </button>
-  <div class="title-block">
-    <h1>AR Grasses</h1>
-    <h4>2018</h4>
-  </div>
-</div>
-
-<div *ngIf="more == 'SF GUI'" class="project">
-  <button mat-button (click)="projectMore('')">
-    戻る
-  </button>
-  <div class="title-block">
-    <h1>SF GUI</h1>
-    <h4>2017</h4>
-  </div>
-</div>
-
-<div *ngIf="more == 'Lunchbox'" class="project">
-  <button mat-button (click)="projectMore('')">
-    戻る
-  </button>
-  <div class="title-block">
-    <h1>Lunchbox</h1>
-    <h4>2017</h4>
-  </div>
-</div>
+<router-outlet></router-outlet>

@@ -13,13 +13,23 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectComponent } from './project/project.component';
 import { AboutComponent } from './about/about.component';
+import { Avatar2iComponent } from './projects/avatar2i/avatar2i.component';
+import { ArAppComponent } from './projects/ar-app/ar-app.component';
+import { ArGrassesComponent } from './projects/ar-grasses/ar-grasses.component';
+import { SfGuiComponent } from './projects/sf-gui/sf-gui.component';
+import { LunchboxComponent } from './projects/lunchbox/lunchbox.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProjectComponent,
-    AboutComponent
+    AboutComponent,
+    Avatar2iComponent,
+    ArAppComponent,
+    ArGrassesComponent,
+    SfGuiComponent,
+    LunchboxComponent
   ],
   imports: [
     BrowserModule,
