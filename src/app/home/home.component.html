@@ -10,5 +10,5 @@
 </div>
 
 <button id="prev-button" mat-button (click)="changeImage(-1)">&#60;</button>
-<button id="more-button" mat-button (click)="moreClick()">more</button>
+<button id="more-button" mat-button routerLink="/Project/{{projects[select_index].id}}">more</button>
 <button id="next-button" mat-button (click)="changeImage(1)">&#62;</button>
