@@ -8,7 +8,7 @@ export interface Project {
 export const Projects: Project[] = [
   {
     title: 'Avatar2i',
-    year: 2019,
+    year: 2018,
     path: 'assets/images/avatar2i.jpg',
     text: ''
   },
