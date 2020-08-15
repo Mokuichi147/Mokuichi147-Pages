@@ -22,7 +22,7 @@ export class ProjectComponent implements OnInit {
 
   backgroundImage(path: string) {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      this.project_bg_image = 'linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url(' + path + ')';
+      this.project_bg_image = 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(' + path + ')';
     } else {
       this.project_bg_image = 'linear-gradient(rgba(224,224,224,0.9), rgba(224,224,224,0.9)), url(' + path + ')';
     }
