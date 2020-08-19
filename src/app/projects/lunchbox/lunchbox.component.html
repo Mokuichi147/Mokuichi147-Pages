@@ -1,9 +1,41 @@
 <div class="project">
-  <button mat-button routerLink="/Project">
-    戻る
-  </button>
   <div class="title-block">
     <h1>Lunchbox</h1>
     <h4>2017</h4>
   </div>
+  <div class="content-space">
+    <div class="subtitle-text">
+      <a>
+        見た目はお弁当箱だが、中にRaspberryPi Zero Wが入っている。<br>
+        登録しておいた時間割を表示したり、本体の向きを変えることで3分を測ることのできるタイマーになる。
+        バッテリーは丸３日程もつ。<br>
+        5分間隔でスピードテストを実行してダウンロードとアップロードの回線の速度を表示することもできる。
+      </a>
+    </div>
+
+    <div class="yt">
+      <img src="assets/images/lunchbox.jpg" />
+    </div>
+
+    <h2>デバイス</h2>
+    <div class="text">
+      <a>
+        ・Raspberry Pi Zero W
+      </a>
+    </div>
+    <h2>環境</h2>
+    <div class="text">
+      <div class="chips main-color">Raspbian OS</div>
+      <div class="chips main-color">Python 3.6</div>
+    </div>
+  </div>
+
+  <div class="back-button">
+    <button mat-button routerLink="/Project">
+      プロジェクト一覧に戻る
+    </button>
+  </div>
+
 </div>
+
+<div class=space></div>
