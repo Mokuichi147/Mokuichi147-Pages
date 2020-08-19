@@ -76,47 +76,58 @@ h2
   border-radius 1vh
 
 .link
-  position relative
-  color white-color
-  //background-color white-color
-  text-align center
-  font-size 1.2rem
-  font-weight bold
-  height 2rem
-  line-height 2rem
-  width 100%
-  @media screen and (min-width 660px)
-    text-align left
-    padding-left 1rem
-
-.link-content
-  height 2rem
   display inline-flex
   text-decoration none
   width 100%
   max-width 500px
   margin-bottom 15px
   margin-right 10px
-  border-radius 1vh
+  border-radius 100vh
   border-bottom 3px solid gray-color
-  @media screen and (min-width 1000px)
+  @media screen and (min-width 1200px)
     max-width calc(100% / 2 - 10px)
 
-.link-content:hover
+.link:hover
   transform translateY(3px)
   border-bottom 0px solid gray-color
 
+.link-content
+  display flex
+  flex-direction column
+  margin-top 0.5rem
+  margin-bottom 0.5rem
+  text-align center
+  width 100%
+  @media screen and (min-width 660px)
+    text-align left
+    padding-left 1rem
+
+.link-title
+  font-weight bold
+  font-size 1.2rem
+  margin 0 auto 0 auto
+  
+
+.link-sub
+  padding-top 0.2rem
+  font-size 1rem
+  margin 0 auto 0 auto
+
 #github
   background-color #333333
+  color white-color
 
 #twitter
   background-color #55acee
+  color black-color
 
 #note
   background-color #41c9b4
+  color black-color
 
 #instagram
   background-image linear-gradient(-135deg,#1400c8,#b900b4,#f50000)
+  color white-color
 
 .main-color
   color white-color
