@@ -1,16 +1,75 @@
 black-color = #101010
 white-color = #e0e0e0
-
-.projects-button
-  display block
-  margin-left auto
-  margin-right auto
-  width 90vw
-  height 40px
-  margin-top 5px
+accent-color = #302a63
+gray-color = #787878
 
 .project-bg
   width 100vw
   height calc(100vh - 60px)
   background-size cover
   background-position center center
+  display flex
+  flex-direction column
+
+.projects-space
+  margin-top auto
+  margin-bottom auto
+  @media screen and (min-width 660px)
+    padding 0 5% 0 10%
+    @media screen and (min-width 1000px)
+      padding 0 10%
+
+.projects-title
+  width 100%
+  text-align center
+  font-weight bold
+  font-size 2.5rem
+  line-height 2.5rem
+  @media screen and (min-width 660px)
+    text-align left
+    line-height 0
+    transform translateY(1.25rem)
+    @media screen and (min-width 1000px)
+      font-size 3rem
+      transform translateY(1.5rem)
+
+.projects
+  width 90%
+  margin-top 5px
+  margin-left auto 
+  margin-right auto
+  @media screen and (min-width 660px)
+    margin-right 0
+    width 60%
+
+.projects-button
+  display inline-flex
+  width 100%
+  margin-bottom 15px
+  margin-right 10px
+  background-color accent-color
+  border-radius 100vh
+  border-bottom 3px solid gray-color
+  @media screen and (min-width 1200px)
+    width calc(100% / 2 - 10px)
+
+.projects-button:hover
+  transform translateY(3px)
+  border-bottom 0px solid gray-color
+
+.projects-button-content
+  display flex
+  flex-direction column
+  margin-top 0.5rem
+  margin-bottom 0.5rem
+  text-align center
+  width 100%
+  @media screen and (min-width 660px)
+    text-align left
+    padding-left 1rem
+
+.projects-button-title
+  color white-color
+  font-weight bold
+  font-size 1.2rem
+  margin 0 auto 0 auto

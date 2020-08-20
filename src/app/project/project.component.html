@@ -1,9 +1,12 @@
-<div *ngIf="more == ''">
-  <div [ngStyle]="{backgroundImage: project_bg_image}" class="project-bg">
-    <div *ngFor="let project of projects">
-      <button class="projects-button" mat-button routerLink="/Project/{{project.id}}" (mouseover)="backgroundImage(project.path)" (click)="projectMore(project.title)">
-        {{project.title}}
-      </button>
+<div [ngStyle]="{backgroundImage: project_bg_image}" class="project-bg" *ngIf="more == ''">
+  <div class="projects-space">
+    <div class="projects-title">PROJECTS</div>
+    <div class="projects">
+      <div *ngFor="let project of projects" class="projects-button" routerLink="/Project/{{project.id}}" (mouseover)="backgroundImage(project.path)" (click)="projectMore(project.title)">
+        <div class="projects-button-content">
+          <div class="projects-button-title">{{project.title}}</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
