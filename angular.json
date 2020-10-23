@@ -128,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "Mokuichi147-Pages"
+  "defaultProject": "Mokuichi147-Pages",
+  "cli": {
+    "analytics": "1faf697c-40ad-4299-88d0-7fd61e762fbe"
+  }
 }
